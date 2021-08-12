@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const MainBeer = () => {
+import CardList from "../../components/CardList"
+
+const MainBeer = (props) => {
+  const { beers } = props;
+
   return (
     <div>
-      MainBeer works
+      <CardList beers={beers}/>
     </div>
   )
 }
