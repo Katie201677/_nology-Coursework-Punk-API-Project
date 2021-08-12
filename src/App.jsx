@@ -1,8 +1,14 @@
 import './App.module.scss';
 
+import MainBeer from "./containers/MainBeer";
+import NavBar from "./containers/NavBar";
+
 const App = () => {
   return (
-    "test"
+    <div>
+      <NavBar />
+      <MainBeer />
+    </div>
   );
 }
 
