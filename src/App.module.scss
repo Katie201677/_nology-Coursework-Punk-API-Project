@@ -1,3 +1,6 @@
-.main {
+@use "./variables.scss" as *;
+
+.content {
+  background-color: $color-blue;
   display: flex;
 }

@@ -1,13 +1,12 @@
 import React from "react";
-import CardList from "./CardList";
+import FilterItem from "./FilterItem";
 import { shallow } from 'enzyme';
-import { beers } from "../../data/beers";
 
-describe("CardList tests", () => {
+describe("FilterItem tests", () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<CardList beers={beers}/>);
+    component = shallow(<FilterItem />);
   })
 
   it('should render', () => {

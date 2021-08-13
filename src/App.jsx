@@ -5,6 +5,7 @@ import styles from './App.module.scss';
 import { getBeers } from "../src/services/beers.service";
 import MainBeer from "./containers/MainBeer";
 import NavBar from "./containers/NavBar";
+import Heading from "./components/Heading";
 
 const App = () => {
   const [ beers, setBeers ] = useState([]);
@@ -21,8 +22,11 @@ const App = () => {
   
   return (
     <div className={styles.main}>
-      <NavBar />
-      <MainBeer beers={beers}/>
+      <Heading headingText="Fancy a Beer?"/>
+      <section className={styles.content}>
+        <NavBar />
+        <MainBeer beers={beers}/>
+      </section>
     </div>
   );
 }
