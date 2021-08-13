@@ -9,22 +9,36 @@ import Heading from "./components/Heading";
 
 const App = () => {
   const [ beers, setBeers ] = useState([]);
+  const [ searchTerm, setSearchTerm ] = useState("");
 
-  const updateBeers = async () => {
-    const updatedBeers = await getBeers();
+  const updateBeers = async (searchTerm) => {
+    const updatedBeers = await getBeers(searchTerm);
     setBeers(updatedBeers);
   }
 
+  const updateSearchTerm = (input) => { 
+    if (input === "") {
+      setSearchTerm("");
+    } else {
+      setSearchTerm(`?beer_name=${input}`)
+    } 
+  }
+    
+  // display all beers on the page initially:
   useEffect(() => {
-    updateBeers();
-    console.log(beers);
+    updateBeers("");
   }, [])
+
+  //update beers displayed when search term entered
+  useEffect(() => {
+    updateBeers(searchTerm)
+  }, [searchTerm]);
   
   return (
     <div className={styles.main}>
       <Heading headingText="Fancy a Beer?"/>
       <section className={styles.content}>
-        <NavBar />
+        <NavBar updateSearchTerm={updateSearchTerm}/>
         <MainBeer beers={beers}/>
       </section>
     </div>

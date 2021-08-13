@@ -4,10 +4,13 @@ import FiltersList from "../../components/FiltersList";
 
 import SearchBar from "../../components/SearchBar";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  
+  const { updateSearchTerm } = props;
+  
   return (
     <nav className={styles.nav}>
-      <SearchBar placeholder="Search for beer"/>
+      <SearchBar placeholder="Search for beer" updateSearchTerm={updateSearchTerm}/>
       <FiltersList />
     </nav>
   )
