@@ -6,12 +6,12 @@ import SearchBar from "../../components/SearchBar";
 
 const NavBar = (props) => {
   
-  const { updateSearchTerm } = props;
+  const { updateSearchTerm, updateABV, isABVChecked } = props;
   
   return (
     <nav className={styles.nav}>
       <SearchBar placeholder="Search for beer" updateSearchTerm={updateSearchTerm}/>
-      <FiltersList />
+      <FiltersList updateABV={updateABV} isABVChecked={isABVChecked}/>
     </nav>
   )
 }

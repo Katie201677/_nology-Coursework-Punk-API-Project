@@ -6,23 +6,33 @@ import { getBeers, getInitialBeers } from "../src/services/beers.service";
 import MainBeer from "./containers/MainBeer";
 import NavBar from "./containers/NavBar";
 import Heading from "./components/Heading";
-import NotFound from "./components/NotFound";
 
 const App = () => {
   const [ beers, setBeers ] = useState([]);
   const [ searchTerm, setSearchTerm ] = useState("");
+  const [ isABVChecked, setIsABVChecked ] = useState(false);
 
-  const updateBeers = async (searchTerm) => {
-    const updatedBeers = await getBeers(searchTerm);
+  const updateSearchTerm = (input) => {
+    let APIParameter;
+    if (input === "") {
+      APIParameter = "";
+    } else {
+      APIParameter = `?beer_name=${input}`
+    }
+    setSearchTerm(APIParameter);
+  }
+
+  useEffect(() => {
+    updateBeers(searchTerm)
+  }, [searchTerm])
+  
+  const updateBeers = async (input) => {
+    const updatedBeers = await getBeers(input);
     setBeers(updatedBeers);
   }
 
-  const updateSearchTerm = (input) => { 
-    if (input === "") {
-      setSearchTerm("");
-    } else {
-      setSearchTerm(`?beer_name=${input}`)
-    } 
+  const updateABV = () => {
+    setIsABVChecked(!isABVChecked);
   }
     
   // display all beers on the page initially:
@@ -30,16 +40,20 @@ const App = () => {
     updateBeers("");
   }, [])
 
-  //update beers displayed when search term entered
   useEffect(() => {
-    updateBeers(searchTerm)
-  }, [searchTerm]);
+    if (isABVChecked) {
+      const filteredBeers = beers.filter(beer => beer.abv > 6);
+      setBeers(filteredBeers);
+    } else {
+      updateBeers(searchTerm);
+    }
+  }, [isABVChecked]);
   
   return (
     <div className={styles.main}>
       <Heading headingText="Fancy a Beer?"/>
       <section className={styles.content}>
-        <NavBar updateSearchTerm={updateSearchTerm}/>
+        <NavBar updateSearchTerm={updateSearchTerm} updateABV={updateABV} isABVChecked={isABVChecked}/>
         <MainBeer beers={beers}/>
       </section>
     </div>

@@ -1,14 +1,18 @@
 import React from 'react';
 import FilterItem from "../FilterItem";
 
-const FiltersList = () => {
+const FiltersList = (props) => {
   
+  const { updateABV, isABVChecked } = props;
+
   return (
     <form>
       <FilterItem 
         id="ABV"
         boxName="High ABV"
         value="High ABV"
+        isABVChecked={isABVChecked}
+        updateABV={updateABV}
       />
       <FilterItem 
         id="range"

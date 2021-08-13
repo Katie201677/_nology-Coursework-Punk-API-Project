@@ -8,6 +8,7 @@ const Card = (props) => {
     <div className={styles.card}>
       <h1>{beer.name}</h1>
       <p>{beer.description}</p>
+      <p>{`ABV is ${beer.abv}`}</p>
     </div>
   )
 }
