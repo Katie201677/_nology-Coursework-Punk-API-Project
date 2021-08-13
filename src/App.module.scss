@@ -1,5 +1,9 @@
 @use "./variables.scss" as *;
 
+.main {
+  width: 100%;
+}
+
 .content {
   background-color: $color-blue;
   display: flex;
