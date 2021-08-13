@@ -8,10 +8,3 @@ export const getBeers = (enquiry) => {
     })
 }
 
-export const getInitialBeers = () => {
-  return fetch(API_URL)
-  .then(response => response.json())
-  .then(jsonResponse => {
-    return jsonResponse
-  })
-}

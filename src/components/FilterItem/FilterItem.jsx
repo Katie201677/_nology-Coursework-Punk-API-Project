@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FilterItem = (props) => {
-  const { id, boxName, value, isABVCHhecked, updateABV } = props;
+  const { id, boxName, value, checked, onChange } = props;
   
   return (
     <div>
@@ -10,8 +10,8 @@ const FilterItem = (props) => {
         id={id}
         name={boxName}
         value={value}
-        checked={isABVCHhecked}
-        onChange={updateABV}
+        checked={checked}
+        onChange={() => onChange(+id)}
       />  
     {boxName}
     </div>
