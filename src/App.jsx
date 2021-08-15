@@ -10,9 +10,8 @@ import Heading from "./components/Heading";
 const App = () => {
   const [ beers, setBeers ] = useState([]);
   const [ searchTerm, setSearchTerm ] = useState("");
-  // const [ isABVChecked, setIsABVChecked ] = useState(false);
   const [ filters, setFilters ] = useState([false, false, false]);
-  // const [ isClassicChecked, setIsClassicChecked ] = useState(false);
+  const [ filteredBeers, setFilteredBeers ] = useState([]);
 
   const updateSearchTerm = (input) => {
     let APIParameter;
@@ -23,24 +22,11 @@ const App = () => {
     }
     setSearchTerm(APIParameter);
   }
-  
+
   const updateBeers = async (input) => {
     const updatedBeers = await getBeers(input);
     setBeers(updatedBeers);
   }
-  
-  useEffect(() => {
-    updateBeers(searchTerm)
-  }, [searchTerm])
-
-  // const updateABV = () => {
-  //   setIsABVChecked(!isABVChecked);
-  // }
-    
-  // display all beers on the page initially:
-  useEffect(() => {
-    updateBeers("");
-  }, [])
 
   const updateFilters = (filterNo) => {
     setFilters([
@@ -50,17 +36,31 @@ const App = () => {
     ]);  
   }
 
+  const filterBeers = (filters, beersToFilter) => {
+    let filteredBeerArray = [...beersToFilter];
+    if (filters[0]) {
+      filteredBeerArray = filteredBeerArray.filter(beer => beer.abv > 6);
+    }
+    if(filters[2]) {
+      filteredBeerArray = filteredBeerArray.filter(beer => beer.ph < 4);
+    }
+    console.log(filteredBeerArray);
+    return filteredBeerArray; 
+  }
+    
+  // display all beers on the page initially:
+  useEffect(() => {
+    updateBeers("");
+  }, []);
 
-  // useEffect(() => {
-  //   if (isABVChecked) {
-  //     const filteredBeers = beers.filter(beer => beer.abv > 6);
-  //     setBeers(filteredBeers);
-  //   }
-  //   else {
-  //     updateBeers(searchTerm);
-  //   }
-  // }, [isABVChecked]);
+  useEffect(() => {
+    updateBeers(searchTerm)
+  }, [searchTerm]);
   
+  useEffect(() => {
+    setFilteredBeers(filterBeers(filters, beers))
+  }, [beers, filters]);
+
   return (
     <div className={styles.main}>
       <Heading headingText="Fancy a Beer?"/>
@@ -70,7 +70,7 @@ const App = () => {
           updateFilters={updateFilters}
           filters={filters}
         />
-        <MainBeer beers={beers}/>
+        <MainBeer beers={filteredBeers}/>
       </section>
     </div>
   );
