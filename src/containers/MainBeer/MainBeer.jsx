@@ -9,7 +9,7 @@ const MainBeer = (props) => {
   
   const contentJsx = beers.length
     ? (<CardList className={styles.list} beers={beers}/>)
-    : (<NotFound className={styles.notFound} text="Sorry, no beers" />
+    : (<NotFound className={styles.notFound} text="Sorry, no beers." />
   );
 
   return (

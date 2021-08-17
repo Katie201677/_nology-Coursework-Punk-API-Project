@@ -1,0 +1,6 @@
+@use "../../variables.scss" as *;
+
+.notFound {
+  font-size: 1.2em;
+  padding: $base-spacing * 2;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from "./FilterItem.module.scss";
 
 const FilterItem = (props) => {
   const { id, boxName, value, checked, onChange } = props;
   
   return (
-    <div>
+    <div className={styles.checkbox}>
       <input
         type="checkbox"
         id={id}
@@ -13,7 +14,7 @@ const FilterItem = (props) => {
         checked={checked}
         onChange={() => onChange(+id)}
       />  
-    {boxName}
+    <span className={styles.label}>{boxName}</span>
     </div>
   )
 }

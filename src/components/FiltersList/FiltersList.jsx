@@ -16,7 +16,7 @@ const FiltersList = (props) => {
       />
       <FilterItem 
         id="1"
-        boxName="Class Range"
+        boxName="Classic Range"
         value="Classic Range"
         checked={filters[1]}
         onChange={updateFilters}

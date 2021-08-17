@@ -1,0 +1,24 @@
+@use "../../variables.scss" as *;
+
+.cardFront {
+  background-color: $color-blue;
+  height: 100%;
+  padding: $base-spacing * 2;
+  text-align: center;
+
+  .detailsContainer {
+    height: 40%;
+  }
+  
+  .h1 {
+    font-size: 1.3em;
+    height: 52px;
+    margin-bottom: $base-spacing * 2;
+    margin-top: $base-spacing * 2;
+  }
+  
+  .img {
+    height: 60%;
+  }
+}
+

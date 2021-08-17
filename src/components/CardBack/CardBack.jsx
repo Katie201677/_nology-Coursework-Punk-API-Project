@@ -9,7 +9,7 @@ const CardBack = (props) => {
     <div>
       <div className={styles.cardBack}>
         <h1>{beer.name}</h1>
-        <p>{`Drink me with ${beer.food_pairing}`}</p>
+        <p>{`First brewed in ${beer.first_brewed}`}</p>
     </div>
     </div>
   )

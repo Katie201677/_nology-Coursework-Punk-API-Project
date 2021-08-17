@@ -36,10 +36,22 @@ const App = () => {
     ]);  
   }
 
+  const extractYear = (date) => {
+    const splitDate = date.split("/");
+    const yearOnly = splitDate[1];
+    return parseInt(yearOnly);
+  }
+
   const filterBeers = (filters, beersToFilter) => {
     let filteredBeerArray = [...beersToFilter];
-    if (filters[0]) {
+    if(filters[0]) {
       filteredBeerArray = filteredBeerArray.filter(beer => beer.abv > 6);
+    }
+    if(filters[1]) {
+      filteredBeerArray = filteredBeerArray.filter(beer => {
+        const year = extractYear(beer.first_brewed);
+        return year < 2010;
+      })
     }
     if(filters[2]) {
       filteredBeerArray = filteredBeerArray.filter(beer => beer.ph < 4);

@@ -1,0 +1,10 @@
+@use "../../variables.scss" as *;
+
+.form {
+  margin: $base-spacing;
+
+  .input {
+    font-family: $font-main;
+    padding: $base-spacing;
+  }
+}

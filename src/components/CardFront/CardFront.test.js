@@ -23,6 +23,6 @@ describe("CardFront tests", () => {
   it("should render the abv in a p tag", () => {
     const abv = testBeer.abv;
     const para = component.find("div").childAt(2);
-    expect(para.text()).toBe(`I am ${abv}%`);
+    expect(para.text()).toBe(`${abv}%`);
   })
 });

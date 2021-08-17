@@ -1,17 +1,8 @@
 @use "../../variables.scss" as *;
 
-// .card {
-//   background-color: $color-white;
-//   border-radius: $radius;
-//   box-shadow: $shadow;
-//   height: 300px;
-//   padding: 10px;
-//   width: 100%;
-// }
-
 .card {
   height: 300px;
-  width: 100%;
+  // width: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
   perspective: 600px;
@@ -24,12 +15,10 @@
 }
 
 .cardSide {
-  max-height: 400px;
-  max-width: 275px;
   height: 100%;
   width: 100%;
   border-radius: $radius;
-  box-shadow: $shadow;
+  // box-shadow: $shadow;
   // border: $primary-border;
   backface-visibility: hidden;
   background-color: white;
