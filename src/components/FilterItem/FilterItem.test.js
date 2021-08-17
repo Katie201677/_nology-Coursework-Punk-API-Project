@@ -9,7 +9,11 @@ describe("FilterItem tests", () => {
     component = shallow(<FilterItem />);
   })
 
-  it('should render', () => {
+  it("should render", () => {
     expect(component).toBeTruthy();
+  })
+
+  it("should render an input", () => {
+    expect(component.find("input").length).toEqual(1);
   })
 });
