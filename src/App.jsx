@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from './App.module.scss';
 
 import { getBeers } from "../src/services/beers.service";
+import { extractYear } from "../src/services/extractYear.service";
 import MainBeer from "./containers/MainBeer";
 import NavBar from "./containers/NavBar";
 import Heading from "./components/Heading";
@@ -34,12 +35,6 @@ const App = () => {
       !filters[filterNo],
       ...filters.slice(filterNo + 1),
     ]);  
-  }
-
-  const extractYear = (date) => {
-    const splitDate = date.split("/");
-    const yearOnly = splitDate[1];
-    return parseInt(yearOnly);
   }
 
   const filterBeers = (filters, beersToFilter) => {
