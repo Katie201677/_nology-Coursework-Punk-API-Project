@@ -2,7 +2,6 @@
 
 .card {
   height: 300px;
-  // width: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
   perspective: 600px;
@@ -15,22 +14,18 @@
 }
 
 .cardSide {
-  height: 100%;
+  height: 300px;
   width: 100%;
-  border-radius: $radius;
-  // box-shadow: $shadow;
-  // border: $primary-border;
   backface-visibility: hidden;
-  background-color: white;
   position: absolute;
 
   &:hover {
-    // box-shadow: $card-hover-shadowing;
-    // border: $secondary-border;
     cursor: pointer;
   }
 }
 
 .cardBack {
+  background-color: white;
+  border-radius: $radius;
   transform: rotateY(180deg);
 }

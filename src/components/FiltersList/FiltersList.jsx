@@ -1,12 +1,13 @@
 import React from 'react';
 import FilterItem from "../FilterItem";
+import styles from "./FiltersList.module.scss";
 
 const FiltersList = (props) => {
   
   const { filters, updateFilters } = props;
 
   return (
-    <form>
+    <form className={styles.form}>
       <FilterItem 
         id="0"
         boxName="High ABV"

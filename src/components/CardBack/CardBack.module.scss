@@ -1,7 +1,32 @@
 @use "../../variables.scss" as *;
 
 .cardBack {
-  // padding: $base-spacing * 4;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  height: 300px;
+  overflow: scroll;
+  padding: $base-spacing * 4;
   position: relative;
+  text-align: center;
   
+  .h1 {
+    font-size: 1.2em;
+    margin-bottom: $base-spacing;
+  }
+
+  .firstBrewed {
+    font-size: 1.1em;
+    margin-bottom: $base-spacing;
+  }
+
+  .description {
+    text-align: justify;
+    text-indent: 10px;
+  }
+
+  .description::first-letter {
+    font-size: 150%;
+  }
 }
+
+

@@ -1,2 +1,8 @@
 @use "../../variables.scss" as *;
 
+@media screen and (max-width: 768px) {
+  .form {
+    display: flex;
+  }
+}
+

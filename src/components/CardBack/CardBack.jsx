@@ -8,8 +8,11 @@ const CardBack = (props) => {
   return (
     <div>
       <div className={styles.cardBack}>
-        <h1>{beer.name}</h1>
-        <p>{`First brewed in ${beer.first_brewed}`}</p>
+        <h1 className={styles.h1}>{beer.name}</h1>
+        <p className={styles.firstBrewed}>{`First brewed in ${beer.first_brewed}`}</p>
+        <blockquote className={styles.description}>
+        {beer.description}
+        </blockquote>
     </div>
     </div>
   )

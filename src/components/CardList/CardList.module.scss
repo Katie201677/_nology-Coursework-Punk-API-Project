@@ -4,14 +4,7 @@
   display: grid;
   gap: $base-spacing * 4;
   grid-template-columns: repeat(auto-fill, 275px);
-  justify-content: space-between;
+  justify-content: center;
   margin: 20px;
   max-width: 100vw;
-  width: 90%;
-
-
-  // .card {
-  //   // height: 400px;
-  //   // width: 275px;
-  // }
 }
