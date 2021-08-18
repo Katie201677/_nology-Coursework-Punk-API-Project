@@ -20,9 +20,9 @@ describe("CardBack tests", () => {
     expect(component.find("h1")).toBeTruthy();
   })
 
-  it("should render the relevant p tag with a food pairing", () => {
-    const foodPairing = testBeer.food_pairing;
-    const para = component.find("p");
-    expect(para.text()).toContain(foodPairing);
+  it("should render the relevant quote tag with a description", () => {
+    const description = testBeer.description;
+    const para = component.find("blockquote");
+    expect(para.text()).toContain(description);
   })
 });

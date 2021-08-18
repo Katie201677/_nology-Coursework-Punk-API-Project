@@ -9,7 +9,6 @@ const FilterItem = (props) => {
       <input
         type="checkbox"
         id={id}
-        name={boxName}
         value={value}
         checked={checked}
         onChange={() => onChange(+id)}
