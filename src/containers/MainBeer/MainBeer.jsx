@@ -13,7 +13,7 @@ const MainBeer = (props) => {
   );
 
   return (
-    <div>
+    <div className={styles.mainBeer}>
       {contentJsx}
     </div>
   )

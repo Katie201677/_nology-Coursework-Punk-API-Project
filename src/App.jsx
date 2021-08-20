@@ -72,12 +72,16 @@ const App = () => {
     <div className={styles.main}>
       <Heading headingText="Fancy a Beer?"/>
       <section className={styles.content}>
-        <NavBar 
-          updateSearchTerm={updateSearchTerm} 
-          updateFilters={updateFilters}
-          filters={filters}
-        />
-        <MainBeer beers={filteredBeers}/>
+        <div className={styles.nav}>
+          <NavBar 
+            updateSearchTerm={updateSearchTerm} 
+            updateFilters={updateFilters}
+            filters={filters}
+          />
+        </div>
+        <div className={styles.mainBeer}>
+          <MainBeer beers={filteredBeers} />
+        </div>
       </section>
     </div>
   );

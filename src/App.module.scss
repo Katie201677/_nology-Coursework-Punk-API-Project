@@ -2,14 +2,16 @@
 
 .main {
   font-family: $font-main;
-  width: 100vw;
 }
 
 .content {
   background-color: $color-blue;
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .content {

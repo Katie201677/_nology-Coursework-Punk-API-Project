@@ -7,7 +7,7 @@ const CardFront = (props) => {
   
   return (
     <div className={styles.cardFront}>
-      <img className={styles.img}  src={beer.image_url} alt="image of beer" />
+      <img className={styles.img}  src={beer.image_url} alt="beer" />
       <div className={styles.detailsContainer}>
         <h1 className={styles.h1}>{beer.name}</h1>
         <p>{`${beer.abv}%`}</p>

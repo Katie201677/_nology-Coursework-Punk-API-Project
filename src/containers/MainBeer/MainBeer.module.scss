@@ -1,0 +1,8 @@
+@use "../../variables.scss" as *;
+
+.mainBeer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $base-spacing;
+  width: 80%;
+}
