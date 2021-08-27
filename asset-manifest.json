@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/noloy-Coursework-Punk-API-Project/static/css/main.76d0c490.chunk.css",
-    "main.js": "/noloy-Coursework-Punk-API-Project/static/js/main.7e3f5511.chunk.js",
-    "main.js.map": "/noloy-Coursework-Punk-API-Project/static/js/main.7e3f5511.chunk.js.map",
-    "runtime-main.js": "/noloy-Coursework-Punk-API-Project/static/js/runtime-main.49a6f673.js",
-    "runtime-main.js.map": "/noloy-Coursework-Punk-API-Project/static/js/runtime-main.49a6f673.js.map",
-    "static/js/2.8ec023ad.chunk.js": "/noloy-Coursework-Punk-API-Project/static/js/2.8ec023ad.chunk.js",
-    "static/js/2.8ec023ad.chunk.js.map": "/noloy-Coursework-Punk-API-Project/static/js/2.8ec023ad.chunk.js.map",
-    "static/js/3.bc873e17.chunk.js": "/noloy-Coursework-Punk-API-Project/static/js/3.bc873e17.chunk.js",
-    "static/js/3.bc873e17.chunk.js.map": "/noloy-Coursework-Punk-API-Project/static/js/3.bc873e17.chunk.js.map",
-    "index.html": "/noloy-Coursework-Punk-API-Project/index.html",
-    "static/css/main.76d0c490.chunk.css.map": "/noloy-Coursework-Punk-API-Project/static/css/main.76d0c490.chunk.css.map",
-    "static/js/2.8ec023ad.chunk.js.LICENSE.txt": "/noloy-Coursework-Punk-API-Project/static/js/2.8ec023ad.chunk.js.LICENSE.txt"
+    "main.css": "/nology-Coursework-Punk-API-Project/static/css/main.76d0c490.chunk.css",
+    "main.js": "/nology-Coursework-Punk-API-Project/static/js/main.7e3f5511.chunk.js",
+    "main.js.map": "/nology-Coursework-Punk-API-Project/static/js/main.7e3f5511.chunk.js.map",
+    "runtime-main.js": "/nology-Coursework-Punk-API-Project/static/js/runtime-main.7281be14.js",
+    "runtime-main.js.map": "/nology-Coursework-Punk-API-Project/static/js/runtime-main.7281be14.js.map",
+    "static/js/2.8ec023ad.chunk.js": "/nology-Coursework-Punk-API-Project/static/js/2.8ec023ad.chunk.js",
+    "static/js/2.8ec023ad.chunk.js.map": "/nology-Coursework-Punk-API-Project/static/js/2.8ec023ad.chunk.js.map",
+    "static/js/3.bc873e17.chunk.js": "/nology-Coursework-Punk-API-Project/static/js/3.bc873e17.chunk.js",
+    "static/js/3.bc873e17.chunk.js.map": "/nology-Coursework-Punk-API-Project/static/js/3.bc873e17.chunk.js.map",
+    "index.html": "/nology-Coursework-Punk-API-Project/index.html",
+    "static/css/main.76d0c490.chunk.css.map": "/nology-Coursework-Punk-API-Project/static/css/main.76d0c490.chunk.css.map",
+    "static/js/2.8ec023ad.chunk.js.LICENSE.txt": "/nology-Coursework-Punk-API-Project/static/js/2.8ec023ad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.49a6f673.js",
+    "static/js/runtime-main.7281be14.js",
     "static/js/2.8ec023ad.chunk.js",
     "static/css/main.76d0c490.chunk.css",
     "static/js/main.7e3f5511.chunk.js"
